@@ -1,475 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Honey Tyler Foundation</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:#050505;
-font-family:Inter,sans-serif;
-color:white;
-overflow-x:hidden;
-
-}
-
-/*=========================
-HEADER
-=========================*/
-
-header{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:28px 80px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-z-index:999;
-
-backdrop-filter:blur(18px);
-background:rgba(5,5,5,.28);
-
-transition:.4s;
-
-}
-
-/*=========================
-LOGO
-=========================*/
-
-.logo{
-
-display:flex;
-flex-direction:column;
-line-height:1;
-
-}
-
-.logo h1{
-
-font-family:'Great Vibes',cursive;
-
-font-size:42px;
-
-font-weight:400;
-
-color:#f8f6f2;
-
-letter-spacing:1px;
-
-}
-
-.logo span{
-
-margin-top:4px;
-
-font-size:10px;
-
-letter-spacing:5px;
-
-color:#b8985b;
-
-text-transform:uppercase;
-
-}
-
-/*=========================
-NAV
-=========================*/
-
-nav{
-
-display:flex;
-gap:48px;
-
-align-items:center;
-
-}
-
-nav a{
-
-text-decoration:none;
-
-color:#eeeeee;
-
-font-size:.92rem;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-position:relative;
-
-transition:.35s;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-10px;
-
-left:0;
-
-width:0;
-
-height:1px;
-
-background:#cba96a;
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-color:white;
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-/*=========================
-DONATE BUTTON
-=========================*/
-
-.donate{
-
-padding:13px 26px;
-
-border:1px solid #cba96a;
-
-border-radius:100px;
-
-text-decoration:none;
-
-color:#cba96a;
-
-transition:.4s;
-
-}
-
-.donate:hover{
-
-background:#cba96a;
-
-color:#050505;
-
-}
-
-/*=========================
-HERO
-=========================*/
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:0 10%;
-
-background:
-
-radial-gradient(circle at top,#1a1a1a 0%,#050505 65%);
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:700px;
-
-height:700px;
-
-background:radial-gradient(circle,
-rgba(201,168,106,.10),
-transparent 70%);
-
-animation:float 12s ease-in-out infinite;
-
-}
-
-@keyframes float{
-
-0%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-35px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:5;
-
-max-width:900px;
-
-}
-
-.hero h2{
-
-font-size:72px;
-
-font-weight:300;
-
-line-height:1.15;
-
-margin-bottom:28px;
-
-}
-
-.hero p{
-
-color:#bcbcbc;
-
-font-size:20px;
-
-line-height:1.8;
-
-max-width:720px;
-
-margin:auto;
-
-}
-
-.hero-buttons{
-
-margin-top:60px;
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-}
-
-.btn{
-
-padding:16px 34px;
-
-text-decoration:none;
-
-border-radius:999px;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-font-size:.82rem;
-
-transition:.4s;
-
-}
-
-.primary{
-
-background:#cba96a;
-
-color:black;
-
-}
-
-.primary:hover{
-
-transform:translateY(-3px);
-
-}
-
-.secondary{
-
-border:1px solid white;
-
-color:white;
-
-}
-
-.secondary:hover{
-
-background:white;
-
-color:black;
-
-}
-
-/*=========================
-RESPONSIVE
-=========================*/
-
-@media(max-width:1000px){
-
-header{
-
-padding:25px;
-
-}
-
-nav{
-
-display:none;
-
-}
-
-.hero h2{
-
-font-size:50px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.hero h2{
-
-font-size:40px;
-
-}
-
-.hero p{
-
-font-size:17px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.logo h1{
-
-font-size:34px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Tyler Foundation</title>
+    
+    <!-- Google Fonts: Great Vibes for script, Playfair Display for elegance, Inter for UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Playfair Display', serif;
+            color: #f8f6f2;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.7);
+        }
+
+        .logo h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            font-weight: 400;
+            color: #d4af37; /* Gold tone */
+        }
+
+        .logo span {
+            display: block;
+            margin-top: -5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 6px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* NAV */
+        nav { display: flex; gap: 40px; align-items: center; }
+        nav a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #d4af37; }
+
+        .donate {
+            padding: 10px 25px;
+            border: 1px solid #d4af37;
+            border-radius: 50px;
+            color: #d4af37;
+        }
+        .donate:hover { background: #d4af37; color: #000; }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        radial-gradient(circle at center, #1a1a1a 0%, #050505 70%);
+        }
+
+        .hero h2 {
+            font-size: 80px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+
+        .primary { background: #d4af37; color: #000; }
+        .primary:hover { background: #fff; }
+
+        .secondary { border: 1px solid #fff; color: #fff; }
+        .secondary:hover { background: #fff; color: #000; }
+
+        @media(max-width: 768px) {
+            .hero h2 { font-size: 50px; }
+            nav { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <header>
+        <div class="logo">
+            <h1>Honey Tyler</h1>
+            <span>Foundation</span>
+        </div>
+        <nav>
+            <a href="#">Mission</a>
+            <a href="#">Our Work</a>
+            <a href="#">Impact</a>
+            <a href="#" class="donate">Donate</a>
+        </nav>
+    </header>
 
-<div class="logo">
-
-<h1>Honey Tyler</h1>
-
-<span>Foundation</span>
-
-</div>
-
-<nav>
-
-<a href="#">Mission</a>
-
-<a href="#">Our Work</a>
-
-<a href="#">Impact</a>
-
-<a href="#">Stories</a>
-
-<a href="#">Partners</a>
-
-<a href="#" class="donate">Donate</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h2>
-Building Hope.<br>
-Creating Opportunity.
-</h2>
-
-<p>
-
-The Honey Tyler Foundation exists to empower individuals,
-strengthen communities, and create lasting impact through
-compassion, advocacy, and meaningful action.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="btn primary">Our Mission</a>
-
-<a href="#" class="btn secondary">Get Involved</a>
-
-</div>
-
-</div>
-
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Building Hope.</h2>
+            <p>The Honey Tyler Foundation exists to empower individuals and strengthen communities through compassion, advocacy, and timeless action.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="#" class="btn primary">Our Mission</a>
+                <a href="#" class="btn secondary">Get Involved</a>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
